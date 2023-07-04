@@ -229,6 +229,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dotenv (~> 2.7)
   dotenv-rails
   importmap-rails
   jbuilder

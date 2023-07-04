@@ -31,6 +31,9 @@ gem "ruby-openai"
 
 gem 'dotenv-rails', groups: [:development, :test]
 
+gem 'dotenv', '~> 2.7', require: 'dotenv'
+
+gem 'dotenv-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
