@@ -22,6 +22,6 @@ class OpenaiService
       ], 
       }
     )
-    puts response.dig("choices", 0, "message", "content")
+    return @itinerary = response.dig("choices", 0, "message", "content")
    end
 end
