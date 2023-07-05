@@ -3,20 +3,10 @@ class ItinerariesController < ApplicationController
   end
 
   def show
-  end
-
-  def new
-  end
-
-  def create
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
+    @city = params[:city]
+    @country = params[:country]
+    @days = params[:days]
+    openai_service = OpenaiService.new
+    @itinerary = openai_service.get_travel_itinerary(@city, @country, @days)
   end
 end
