@@ -1,11 +1,16 @@
 <h1>Weather Data for <%= params[:city] %>, <%= params[:country] %></h1>
 
 <% if @weather_data %>
+  <p>Datetime: <%= @weather_data['datetime']%>
+  <p>High Temperature: <%= @weather_data['high_temp'] %>°C</p>
+  <p>Low Temperature: <%= @weather_data['low_temp'] %>°C</p>
   <p>Temperature: <%= @weather_data['temp'] %>°C</p>
-  <p>Sunrise Time: <%= @weather_data['sunrise'] %> </p>
-  <p>Sunset Time: <%= @weather_data['sunset'] %> </p>
-  <p>Weather: <%= @weather_data['weather']['description'] %> </p>
+  <p>Sunrise Time: <%= Time.at(@weather_data['sunrise_ts']).strftime("%Y-%m-%d %H:%M:%S") %></p>
+  <p>Sunset Time: <%= Time.at(@weather_data['sunset_ts']).strftime("%Y-%m-%d %H:%M:%S") %></p>
+  <p>Moonrise Time: <%= Time.at(@weather_data['moonrise_ts']).strftime("%Y-%m-%d %H:%M:%S") %></p>
+  <p>Moonset Time: <%= Time.at(@weather_data['moonset_ts']).strftime("%Y-%m-%d %H:%M:%S") %></p>
 
+  <p>Weather: <%= @weather_data['weather']['description'] %> </p>
 <% else %>
   <p>No weather data available for the provided city and country.</p>
 <% end %>

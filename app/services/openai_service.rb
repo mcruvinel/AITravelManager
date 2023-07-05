@@ -10,8 +10,8 @@ class OpenaiService
     @openai = OpenAI::Client.new(access_token: api_key)
   end
 
-   def get_travel_itinerary(city, country, dias)
-    prompt = "Irei viajar para #{city} #{country}, me traga as informações relevantes sobre o local e me faça roteiro de turismo para #{dias} dias."
+   def get_travel_itinerary(city, country, dias, objectives = '')
+    prompt = "Irei viajar para #{city} #{country}, me traga as informações relevantes sobre o local e me faça roteiro de turismo para #{dias} dias e baseado em #{objectives}."
     response = @openai.chat(
     parameters: {
       model: "gpt-3.5-turbo",
