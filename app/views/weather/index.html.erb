@@ -1,0 +1,11 @@
+<h1>Weather Search</h1>
+
+<%= form_with(url: weather_show_path, method: 'get') do |form| %>
+  <%= form.label :city, 'City:' %>
+  <%= form.text_field :city %>
+
+  <%= form.label :country, 'Country:' %>
+  <%= form.text_field :country %>
+
+  <%= form.submit 'Search' %>
+<% end %>

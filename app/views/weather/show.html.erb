@@ -1,0 +1,11 @@
+<h1>Weather Data for <%= params[:city] %>, <%= params[:country] %></h1>
+
+<% if @weather_data %>
+  <p>Temperature: <%= @weather_data['temp'] %>°C</p>
+  <p>Sunrise Time: <%= @weather_data['sunrise'] %> </p>
+  <p>Sunset Time: <%= @weather_data['sunset'] %> </p>
+  <p>Weather: <%= @weather_data['weather']['description'] %> </p>
+
+<% else %>
+  <p>No weather data available for the provided city and country.</p>
+<% end %>

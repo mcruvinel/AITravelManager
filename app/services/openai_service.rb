@@ -6,7 +6,7 @@ Dotenv.load
 
 class OpenaiService
   def initialize
-    api_key = ENV['OPENAI_API_KEY']
+    api_key = ""
     @openai = OpenAI::Client.new(access_token: api_key)
   end
 

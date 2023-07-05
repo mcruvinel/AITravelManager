@@ -2,7 +2,11 @@ require 'httparty'
 require 'json'
 
 class WeatherService
-  WEATHERBIT_API_KEY = "4bdeb59fa0a04b28835f998ab8d1d7b3"
+<<<<<<< HEAD
+  WEATHERBIT_API_KEY = ""
+=======
+  WEATHERBIT_API_KEY = ""
+>>>>>>> 5d3e885 (Revert "weather controller")
   def get_weather_by_city(city, country)
     location_url = "https://api.weatherbit.io/v2.0/current?&city=#{city}&country=#{country}&key=#{WEATHERBIT_API_KEY}"
     location_response = HTTParty.get(location_url)
