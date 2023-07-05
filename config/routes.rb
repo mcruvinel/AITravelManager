@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'home#index'
   get 'itineraries/index'
   get 'itineraries/show'
   get 'itineraries/new'
@@ -15,6 +16,9 @@ Rails.application.routes.draw do
   get 'trips/destroy'
   get 'weather/index'
   get 'weather/show', to: 'weather#show', as: 'weather_show'
+  get 'home/index'
+  get 'home/about'
+  get 'home/contact'
 
 
   # Rest of your routes...
