@@ -11,7 +11,7 @@ class OpenaiService
   end
 
    def get_travel_itinerary(city, country, dias)
-    prompt = "Irei viajar para #{city} #{country}, me traga as informações relevantes sobre o local e me faça roteiro de turismo para #{dias}."
+    prompt = "Irei viajar para #{city} #{country}, me traga as informações relevantes sobre o local e me faça roteiro de turismo para #{dias} dias."
     response = @openai.chat(
     parameters: {
       model: "gpt-3.5-turbo",
