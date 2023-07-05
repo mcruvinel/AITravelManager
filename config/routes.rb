@@ -13,8 +13,12 @@ Rails.application.routes.draw do
   get 'trips/edit'
   get 'trips/update'
   get 'trips/destroy'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'weather/index'
+  get 'weather/show', to: 'weather#show', as: 'weather_show'
+
+
+  # Rest of your routes...
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  # root "controller#action"
 end
