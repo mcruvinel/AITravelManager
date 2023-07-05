@@ -1,2 +1,8 @@
-<h1>Itineraries#show</h1>
-<p>Find me in app/views/itineraries/show.html.erb</p>
+<h1>Itinerary for <%= params[:city] %>, <%= params[:country] %></h1>
+
+<% if @itinerary %>
+  <p><%= @itinerary%> </p>
+
+<% else %>
+  <p>Can't estabelish connection with openIA.</p>
+<% end %>

@@ -1,2 +1,53 @@
-<h1>Itineraries#index</h1>
-<p>Find me in app/views/itineraries/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trip Planner: Effortlessly Create Itineraries for Your Travel Adventures</title>
+  <link rel="stylesheet" href="itinerary.css">
+</head>
+<body>
+  <h1>Effortlessly Create Itineraries for Your Travel Adventures</h1>
+
+  <p>
+    Are you tired of spending hours planning your travel itinerary? Look no further! Our innovative Trip Planner feature takes the hassle out of organizing your trips. Simply provide us with the city, country, and duration of your journey, and let our system generate a comprehensive itinerary for you.
+  </p>
+
+  <h2>Here's how it works:</h2>
+
+  <ol>
+    <li>
+      <strong>Input your destination:</strong>
+      Tell us the city and country you'll be visiting. Whether it's the bustling streets of Tokyo, the romantic charm of Paris, or the exotic beaches of Bali, our Trip Planner can handle it all.
+    </li>
+    <li>
+      <strong>Specify trip duration:</strong>
+      Let us know how long you'll be staying in your chosen location. Whether it's a quick weekend getaway or an extended vacation, our algorithm will optimize your itinerary accordingly.
+    </li>
+    <li>
+      <strong>Instant itinerary creation:</strong>
+      Sit back and relax as our intelligent system goes to work. It will analyze various factors such as popular attractions, local events, transportation options, and even user preferences to create a personalized itinerary just for you.
+    </li>
+    <li>
+      <strong>Explore day-to-day activities:</strong>
+      Once your itinerary is ready, you'll have access to a detailed breakdown of activities for each day of your trip. From must-visit landmarks and cultural experiences to hidden gems and recommended dining spots, we've got you covered.
+    </li>
+  </ol>
+
+  <p>Start planning your next adventure today with our Trip Planner!</p>
+</body>
+</html>
+
+  <%= form_with(url: itineraries_show_path, method: 'get') do |form| %>
+  <%= form.label :city, 'City:' %>
+  <%= form.text_field :city, required: true %>
+
+  <%= form.label :country, 'Country:' %>
+  <%= form.text_field :country, required: true %>
+
+  <%= form.label :days, 'Duration?:' %>
+  <%= form.text_field :days, required: true %>
+
+  <%= form.submit 'Create Itinerary' %>
+<% end %>
+
+</body>
+</html>

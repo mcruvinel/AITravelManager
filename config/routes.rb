@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
-  get 'itineraries/index'
-  get 'itineraries/show'
+  get 'itineraries/index', to: 'itineraries#index', as: 'itineraries_index'
+  get 'itineraries/show', to: 'itineraries#show', as: 'itineraries_show'
   get 'itineraries/new'
   get 'itineraries/create'
   get 'itineraries/edit'
