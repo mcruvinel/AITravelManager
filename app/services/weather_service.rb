@@ -4,7 +4,7 @@ require 'json'
 class WeatherService
   WEATHERBIT_API_KEY = ""
   def get_weather_by_city(city, country)
-    location_url = "https://api.weatherbit.io/v2.0/forecast/daily&city=#{city}&country=#{country}&key=#{WEATHERBIT_API_KEY}"
+    location_url = "https://api.weatherbit.io/v2.0/current?&city=#{city}&country=#{country}&key=#{WEATHERBIT_API_KEY}"
     location_response = HTTParty.get(location_url)
     if location_response.empty?
       raise "No connection to the Weatherbit API."
